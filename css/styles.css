@@ -1,6 +1,9 @@
-* {
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
+body, html {
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .body {
@@ -13,7 +16,6 @@
                          "sidebar main";
 }
 
-/* Main elements */
 header, aside, main {
     text-align: center;
 }
@@ -22,12 +24,19 @@ header {
     position: absolute;
     background-color: transparent;
     width: 100%;
-    height: 50px;
+    height: 5em;
 }
 
 aside {
     background-color: white;
     grid-area: sidebar;
+}
+
+aside .beautica-list .beautica-item {
+    font-family: 'Amiri', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: black;
 }
 
 main {
@@ -65,6 +74,18 @@ main {
     justify-content: center;
     align-items: center;
     text-align: left;
+    font-family: 'Amiri', serif;
+    line-height: 2.5em;
+}
+
+.middle .cta .cta-regular-text {
+    font-weight: 400;
+    font-size: 42px;
+}
+
+.middle .cta .cta-bolded-text {
+    font-weight: 700;
+    font-size: 52px;
 }
 
 .middle .pagination {
@@ -89,7 +110,6 @@ main {
     background-color: white;
     border-radius: 50%;
     cursor: pointer;
-
 }
 
 .middle .pagination .pagination-items .pagination-item.active {
@@ -101,7 +121,6 @@ main {
 }
 
 .before-bottom {
-    background-color: coral;
     grid-area: before-bottom;
     width: 32em;
     display: flex;
@@ -111,7 +130,13 @@ main {
 }
 
 .before-bottom .btn {
-    
+    background-color: black;
+    border: 0;
+    text-decoration: underline;
+    color: white;
+    font-weight: 600;
+    padding: .7em 1.5em;
+    cursor: pointer;
 }
 
 .bottom {
@@ -119,8 +144,6 @@ main {
     grid-area: bottom;
 }
 
-
-/* Navigation */
 header .navigation-list {
     display: flex;
     list-style: none;
@@ -128,11 +151,10 @@ header .navigation-list {
     justify-content: right;
     align-items: center;
     height: 100%;
-
 }
 
 header .navigation-list .navigation-item {
-    margin: 0 20px;
+    margin: 20px;
 }
 
 aside .beautica-list {
@@ -145,14 +167,3 @@ aside .beautica-list {
     width: auto;
     padding: 0px;
 }
-
-aside .beautica-list .beautica-item {
-    
-}
-
-
-
-.hero {
-   
-}
-
