@@ -26,7 +26,6 @@ header, aside, main {
 
 header {
     position: absolute;
-    background-color: transparent;
     width: 100%;
     height: 5em;
 }
@@ -40,7 +39,7 @@ aside .beautica-list .beautica-item {
     font-family: 'Amiri', serif;
     font-weight: 700;
     font-size: 28px;
-    color: black;
+    color: #625B5B;
 }
 
 main {
@@ -71,7 +70,7 @@ main {
 }
 
 .middle .cta {
-    background-color: white;
+    background-color: #EBC7C7;
     width: 32em;
     display: flex;
     flex-direction: row;
@@ -79,17 +78,18 @@ main {
     align-items: center;
     text-align: left;
     font-family: 'Amiri', serif;
-    line-height: 2.5em;
+    line-height: 3em;
 }
 
 .middle .cta .cta-regular-text {
     font-weight: 400;
     font-size: 42px;
+    color: #625B5B;
 }
 
 .middle .cta .cta-bolded-text {
     font-weight: 700;
-    font-size: 52px;
+    font-size: 72px;
 }
 
 .middle .pagination {
@@ -155,6 +155,7 @@ header .navigation-list {
     justify-content: right;
     align-items: center;
     height: 100%;
+    width: 100%;
 }
 
 header .navigation-list .navigation-item {
@@ -162,20 +163,193 @@ header .navigation-list .navigation-item {
 }
 
 aside .beautica-list {
-    list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    list-style: none;
     height: 100%;
     width: auto;
     padding: 0px;
 }
 
 
-/* Effects */
+/* MEDIA QUERIES */
 
-/* Fading animation */
-.fade {
-    transition: .5s;
+/* Popular media queries
+Mobile: 320px - 480px
+Tablet: 481px - 768px
+Small Screen Laptops: 769px - 1080px
+Desktop, Large screen: 1025px - 1200px
+Extra large screens, Tv: 1201 and more */
+
+
+/* Mobile */
+
+@media only screen and (max-width: 700px) {
+    header .navigation-list {
+        display: none;
+    }
+
+    header .hamburger-menu-container {
+        
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    header .hamburger-menu-container .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        justify-content: center;
+        text-align: right;
+        margin-right: 2em;
+    }
+
+    header .hamburger-menu-container .hamburger-menu #nav-icon {
+        color: black;
+        font-size: 1.5em;
+    }
+
+    .body {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "main";
+    }
+
+    .body aside {
+        display: none;
+    }
+
+    main.main {
+        grid-area: main;
+        background-image: none;
+        display: grid;
+        height: 100vh;
+        grid-template-columns: auto;
+        grid-template-rows: 38% 10% 12% auto;
+        grid-template-areas: "hero"
+                             "brand"
+                             "cta-and-shop-btn"
+                             "bottom";
+    }
+
+    .top {
+        grid-area: hero;
+        background-image: url('../images/01_slide-1.jpg');
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .brand .beautica-list {
+        grid-area: brand;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+        height: 100%;
+        width: auto;
+        padding: 0px;
+    }
+
+    .brand .beautica-list .beautica-item {
+        font-family: 'Amiri', serif;
+        font-weight: 700;
+        font-size: 1.3em;
+        color: #625B5B;
+
+    }
+
+    .cta-and-shop-btn {
+        grid-area: cta-and-shop-btn;
+        background-color: #EBC7C7;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .cta-and-shop-btn .cta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        margin-left: 2rem;
+        font-family: 'Amiri', serif;
+        line-height: 2.1em;
+    }
+
+    .cta-and-shop-btn .cta .cta-regular-text{
+        font-weight: 400;
+        font-size: 1.3em;
+        color: #625B5B;
+    }
+
+    .cta-and-shop-btn .cta .cta-bolded-text{
+        font-weight: 700;
+        font-size: 2em;
+        color: black;
+    }
+
+    .cta-and-shop-btn .shop-btn {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2rem;
+
+    }
+
+    .cta-and-shop-btn .shop-btn .btn {
+        background-color: black;
+        border: 0;
+        text-decoration: underline;
+        color: white;
+        font-weight: 600;
+        padding: .7em 1.5em;
+        cursor: pointer;
+    }
+
+
+
+    .bottom {
+        grid-area: bottom;
+    }
+
+
+    /* Hidden elements */
+
+    .before-bottom {
+        display: none;
+    }
+
+    .middle {
+        display: none;
+    }
+
+    .middle .pagination {
+        display: none;
+    }
+  }
+
+
+  @media only screen and (min-width: 700px) { 
+    header .hamburger-menu-container {
+        display: none;
+    }
+
+    .brand {
+        display: none;
+    }
+
+    .cta-and-shop-btn {
+        display: none;
+    }
   }

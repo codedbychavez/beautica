@@ -4,7 +4,10 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="css/styles.css" rel="stylesheet">
+
     </head>
     <body class="body">
 
@@ -14,10 +17,17 @@
                     <li class="navigation-item">About</li>
                     <li class="navigation-item">Contact</li>
                 </ul>
+
+                <div class="hamburger-menu-container">
+                    <div class="hamburger-menu">
+                        <i id="nav-icon" class="fa fa-bars"></i>
+                    </div>
+                    
+                </div>
         </header>
             
         <aside class="sidebar">
-            <uL class="beautica-list">
+            <ul class="beautica-list">
                 <li class="beautica-item">B</li>
                 <li class="beautica-item">E</li>
                 <li class="beautica-item">A</li>
@@ -26,7 +36,7 @@
                 <li class="beautica-item">I</li>
                 <li class="beautica-item">C</li>
                 <li class="beautica-item">A</li>
-            </uL>
+            </ul>
         </aside>
 
 
@@ -42,9 +52,9 @@
               </div>
               <div class="pagination">
                 <ul class="pagination-items">
-                    <li id="1" class="pagination-item" onclick="changeBg(0)"></li>
-                    <li id="2" class="pagination-item" onclick="changeBg(1)"></li>
-                    <li id="3" class="pagination-item" onclick="changeBg(2)"></li>
+                    <li id="0" class="pagination-item active"></li>
+                    <li id="1" class="pagination-item"></li>
+                    <li id="2" class="pagination-item"></li>
                 </ul>
               </div>
           </div>
@@ -56,8 +66,37 @@
 
           <div class="bottom"></div>
 
+          <div class="brand">
+            <uL class="beautica-list">
+                <li class="beautica-item">B</li>
+                <li class="beautica-item">E</li>
+                <li class="beautica-item">A</li>
+                <li class="beautica-item">U</li>
+                <li class="beautica-item">T</li>
+                <li class="beautica-item">I</li>
+                <li class="beautica-item">C</li>
+                <li class="beautica-item">A</li>
+            </uL>
+          </div>
+
+          <div class="cta-and-shop-btn">
+            <div class="cta">
+                <div>
+                  <span class="cta-regular-text">More than just</span> <br/>
+                  <span class="cta-bolded-text">Cosmetics</span>
+                </div>
+            </div>
+
+            <div class="shop-btn">
+                <button type="button" class="btn">Shop Now</button>
+            </div>
+
+
+
+          </div>
+
+
         </main>
 
     </body>
-    <script src="./js/script.js"></script>
 </html>
